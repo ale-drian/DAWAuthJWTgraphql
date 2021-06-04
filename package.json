@@ -1,20 +1,26 @@
 {
-  "name": "authentication-api",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "apollo-server": "^2.25.0",
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^10.0.0",
-    "jsonwebtoken": "^8.5.1",
-    "nodemon": "^2.0.7",
-    "sequelize": "^6.6.2",
-    "sqlite3": "^5.0.2"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1"
-  }
+    "name": "authentication-api",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "migrate": " sequelize db:migrate",
+        "dev": "nodemon src/server --exec babel-node -e js",
+        "start": "node src/server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "apollo-server": "^2.25.0",
+        "bcryptjs": "^2.4.3",
+        "dotenv": "^10.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "nodemon": "^2.0.7",
+        "sequelize": "^6.6.2",
+        "sqlite3": "^5.0.2"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-stage-0": "^6.24.1"
+    }
 }
